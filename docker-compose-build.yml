@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend-user:
+    build:
+      context: ./udagram-api-user
+    image: udagram-api-user
+    ports:
+      - "9001:8080"
+
+  backend-feed:
+    build: 
+      context: ./udagram-api-feed
+    image: udagram-api-feed
+    ports:
+      - "9002:8080"
+
+  frontend:
+    build: 
+      context: ./udagram-frontend
+    image: udagram-frontend:local
+    ports:
+      - "9003:8100"
+
+  udagram-reverseproxy:
+    build: 
+      context: ./udagram-reverseproxy
+    image: reverseproxy
+    ports:
+      - "8050:8080"
