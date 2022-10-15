@@ -18,8 +18,12 @@ jobs:
     - uses: actions/checkout@v3
     - run: echo "first action tuts"
     - run: ls -l
-    - run: docker-compose -f docker-compose.yaml build --parallel
+    - run: docker-compose -f docker-compose.yml build --parallel
     - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v1
     - run: docker tag udagram-api-user nstandev/udagram-api-user:v1
     - run: docker tag udagram-frontend:local nstandev/udagram-frontend:v1 
     - run: docker tag reverseproxy nstandev/reverseproxy:v1
+    - run: docker push nstandev/udagram-api-feed:v1
+    - run: docker push nstandev/udagram-api-user:v1
+    - run: docker push nstandev/udagram-frontend:v1
+    - run: docker push nstandev/reverseproxy:v1 
