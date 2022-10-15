@@ -13,10 +13,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      Greeting: Hello
     steps:
     - uses: actions/checkout@v3
-    - run: echo "first action tuts"
+    - run: echo "first action tuts $Greeting"
     - run: ls -l
     - run: docker-compose -f docker-compose.yml build --parallel
     - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v1
