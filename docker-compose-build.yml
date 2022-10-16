@@ -7,6 +7,16 @@ services:
     image: udagram-api-user
     ports:
       - "9001:8080"
+    environment:
+      POSTGRES_USERNAME: $POSTGRES_USERNAME
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD 
+      POSTGRES_DB: $POSTGRES_DB 
+      POSTGRES_HOST: $POSTGRES_HOST
+      AWS_REGION: $AWS_REGION 
+      AWS_PROFILE: $AWS_PROFILE 
+      AWS_BUCKET: $AWS_BUCKET
+      JWT_SECRET: $JWT_SECRET
+      URL: "http://localhost:8100"
 
   backend-feed:
     build: 
@@ -14,6 +24,16 @@ services:
     image: udagram-api-feed
     ports:
       - "9002:8080"
+    environment:
+      POSTGRES_USERNAME: $POSTGRES_USERNAME
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD 
+      POSTGRES_DB: $POSTGRES_DB 
+      POSTGRES_HOST: $POSTGRES_HOST
+      AWS_REGION: $AWS_REGION 
+      AWS_PROFILE: $AWS_PROFILE 
+      AWS_BUCKET: $AWS_BUCKET
+      JWT_SECRET: $JWT_SECRET
+      URL: "http://localhost:8100"
 
   frontend:
     build: 
