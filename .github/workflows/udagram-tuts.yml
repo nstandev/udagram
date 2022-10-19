@@ -17,6 +17,7 @@ jobs:
       Greeting: Hi
     steps:
     - uses: actions/checkout@v3
+    - run: node --version
     - run: echo "first action tuts $Greeting"
     - run: ls -l
     - run: npm install -g @ionic/cli
