@@ -16,14 +16,10 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x, 18.x]
-    env:
-      Greeting: Hi
+        
     steps:
     - uses: actions/checkout@v3
     - run: node --version
-    - run: echo "first action tuts $Greeting"
-    - run: ls -l
-    - run: npm install -g @ionic/cli
     - run: docker-compose -f docker-compose-build.yml build --parallel
     - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v1
     - run: docker tag udagram-api-user nstandev/udagram-api-user:v1
