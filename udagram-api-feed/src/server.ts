@@ -15,7 +15,7 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 (async () => {
   await sequelize.addModels(V0_FEED_MODELS);
 
-  console.log(new AWS.S3().config.credentials)
+  // console.log(new AWS.S3().config.credentials)
 
   console.debug("Initialize database connection...");
   await sequelize.sync();
