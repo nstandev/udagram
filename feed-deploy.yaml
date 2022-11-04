@@ -19,3 +19,8 @@ spec:
         image: nstandev/udagram-api-feed:v1
         ports:
         - containerPort: 8080
+        envFrom:
+          - configMapRef: 
+              name: udagram-configmap
+          - secretRef:
+              name: udagram-secret
