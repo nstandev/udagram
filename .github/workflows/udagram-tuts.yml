@@ -21,12 +21,12 @@ jobs:
     - uses: actions/checkout@v3
     - run: node --version
     - run: docker-compose -f docker-compose-build.yml build --parallel
-    - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v2
-    - run: docker tag udagram-api-user nstandev/udagram-api-user:v2
-    - run: docker tag udagram-frontend:local nstandev/udagram-frontend:v2
-    - run: docker tag reverseproxy nstandev/reverseproxy:v2
+    - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v3
+    - run: docker tag udagram-api-user nstandev/udagram-api-user:v3
+    - run: docker tag udagram-frontend:local nstandev/udagram-frontend:v3
+    - run: docker tag reverseproxy nstandev/reverseproxy:v3
     - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
-    - run: docker push nstandev/udagram-api-feed:v2
-    - run: docker push nstandev/udagram-api-user:v2
-    - run: docker push nstandev/udagram-frontend:v2
-    - run: docker push nstandev/reverseproxy:v2
+    - run: docker push nstandev/udagram-api-feed:v3
+    - run: docker push nstandev/udagram-api-user:v3
+    - run: docker push nstandev/udagram-frontend:v3
+    - run: docker push nstandev/reverseproxy:v3

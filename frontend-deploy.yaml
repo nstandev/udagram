@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
+  name: frontend
   labels:
-    app: backend-feed
+    app: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: backend-feed
+      app: frontend
   template:
     metadata:
       labels:
-        app: backend-feed
+        app: frontend
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: frontend
+        image: nstandev/udagram-frontend:v2
         ports:
-        - containerPort: 8080
+        - containerPort: 80

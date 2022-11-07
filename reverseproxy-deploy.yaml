@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
+  name: reverseproxy
   labels:
-    app: backend-feed
+    app: reverseproxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: backend-feed
+      app: reverseproxy
   template:
     metadata:
       labels:
-        app: backend-feed
+        app: reverseproxy
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: reverseproxy
+        image: nstandev/reverseproxy:v2
         ports:
         - containerPort: 8080

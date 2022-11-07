@@ -1,21 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
+  name: backend-user
   labels:
-    app: backend-feed
+    app: backend-user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend-feed
+      app: backend-user
   template:
     metadata:
       labels:
-        app: backend-feed
+        app: backend-user
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: backend-user
+        image: nstandev/udagram-api-user:v2
         ports:
         - containerPort: 8080
+        envFrom:
+          - configMapRef: 
+              name: udagram-configmap
+          - secretRef:
+              name: udagram-secret
