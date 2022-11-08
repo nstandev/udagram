@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: nstandev/reverseproxy:v2
+        image: nstandev/reverseproxy:v3
         ports:
         - containerPort: 8080
