@@ -6,10 +6,12 @@ export const config = {
   'dialect': 'postgres',
   'aws_region': process.env.AWS_REGION,
   'aws_profile': process.env.AWS_PROFILE,
-  'aws_profile_bucket': process.env.AWS_PROFILE_BUCKET,
   'aws_media_bucket': process.env.AWS_BUCKET,
   'url': process.env.URL,
   'jwt': {
     'secret': process.env.JWT_SECRET,
   },
 };
+
+
+// 'aws_profile_bucket': process.env.AWS_PROFILE_BUCKET,
