@@ -4,11 +4,14 @@ metadata:
   name: udagram-configmap
 data:
   # property-like keys; each key maps to a simple value
-  POSTGRES_HOST: udagram03.cbnk4egzaawz.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: udagram.czmogt9uek3e.us-east-1.rds.amazonaws.com
+
   POSTGRES_DB: postgres
-  AWS_BUCKET: udagram03-675477828855
+  AWS_BUCKET: udagram-938389376904
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: esting
   URL: http://localhost:8100
 
+#  uda: udagram03.cbnk4egzaawz.us-east-1.rds.amazonaws.com
+# personal : udagram.czmogt9uek3e.us-east-1.rds.amazonaws.com
