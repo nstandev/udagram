@@ -9,6 +9,7 @@ data:
   AWS_BUCKET: udagram-938389376904
   AWS_REGION: us-east-1
   AWS_PROFILE: default
+  AWS_PROFILE_BUCKET: bucket
   JWT_SECRET: esting
   URL: http://localhost:8100
 
