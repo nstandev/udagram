@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nstandev/udagram-frontend:node_balancer_v1
+        image: nstandev/udagram-frontend:node_balancer_v2
         ports:
         - containerPort: 80
