@@ -16,7 +16,7 @@ export const s3 = new AWS.S3({
 export function getGetSignedUrl( key: string ): string {
   const signedUrlExpireSeconds = 60 * 5;
 
-  console.log(`CREDENTIALSSASDIJHFOUHSUF!!!! ========> ${credentials}`)
+  // console.log(`CREDENTIALSSASDIJHFOUHSUF!!!! ========> ${credentials}`)
 
   return s3.getSignedUrl('getObject', {
     Bucket: config.aws_media_bucket,
