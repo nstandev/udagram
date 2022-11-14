@@ -24,7 +24,7 @@ jobs:
     - run: docker tag udagram-api-feed nstandev/udagram-api-feed:v8
     - run: docker tag udagram-api-user nstandev/udagram-api-user:v8
     - run: docker tag udagram-frontend:local nstandev/udagram-frontend:v8
-    - run: docker tag reverseproxy nstandev/reverseproxy:v5
+    - run: docker tag reverseproxy nstandev/reverseproxy:v8
     - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
     - run: docker push nstandev/udagram-api-feed:v8
     - run: docker push nstandev/udagram-api-user:v8
