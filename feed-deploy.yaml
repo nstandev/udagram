@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: nstandev/udagram-api-feed:v7
+        image: nstandev/udagram-api-feed:v8
         ports:
         - containerPort: 8080
         resources:
